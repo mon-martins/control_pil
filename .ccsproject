@@ -13,4 +13,6 @@
 	<templateProperties value="id=empty_lab_launchpad.projectspec.lab_lp_f2837xd"/>
 	<origin value="C:\ti\c2000\C2000Ware_5_04_00_00\training\device\f2837xd\empty_lab\empty_lab_launchpad.projectspec"/>
 	<filesToOpen value=""/>
+	<isTargetManual value="false"/>
+	<connection value="common/targetdb/connections/TIXDS100v2_Connection.xml"/>
 </projectOptions>
