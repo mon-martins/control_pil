@@ -4,29 +4,27 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 #Parâmetros
-fsw = 20000
+fsw = 10000
 Vin = 24
-L = 400e-6
-C = 47e-6
+L = 4000e-6
+C = 470e-6
 R = 5
 
 vcp = 1
 
 Tp = 1/(2*np.pi*fsw*0.1)
 
-PM = 30  #graus
-FC = 5000 #Hz
+PM = 60  #graus
+FC = 100 #Hz
 
 #Cálculo do controlador no domínio da frequência
 
-Gp = control.tf([Vin],[L*C,L/R,1])
+A_1 = [ [0 , -0.75/(400e-6)] , [0.75/(47e-6) , -1/(5*47e-6)] ]
+B_1 = [ [32/(400e-6)] , [-((32/5)/(0.75))/(47e-6)] ]
+C_1 = [0 , 1]
+D_1 = [0]
 
-# A_1 = [ [0 , -0.75/(400e-6)] , [0.75/(47e-6) , -1/(5*47e-6)] ]
-# B_1 = [ [32/(400e-6)] , [-((32/5)/(0.75))/(47e-6)] ]
-# C_1 = [0 , 1]
-# D_1 = [0]
-
-# Gp = control.ss(A_1,B_1,C_1,D_1)
+Gp = control.ss(A_1,B_1,C_1,D_1)
 
 Gpwm = control.tf([1],[vcp])
 Gs = control.tf([1],[1])

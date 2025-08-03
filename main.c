@@ -6,9 +6,9 @@
 #include "board.h"
 #include "scicomm.h"
 
-#define B0 0.000386f
-#define B1 0.000117f
-#define B2 -0.000269f
+#define B0 0.000183f
+#define B1 0.000349f
+#define B2 0.000166f
 #define A1 -1.521886f
 #define A2 0.521886f
 

@@ -636,11 +636,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 27; 1539, 1067]
+      Location      [0, 23; 1920, 1059]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAABgMAAAP1AAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABSAP///wAAB4AAAAPxAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -883,146 +883,6 @@ Plecs {
       Parameter {
         Variable      "Width"
         Value         "2"
-        Show          off
-      }
-    }
-    Component {
-      Type          CScript
-      Name          "C-Script"
-      Show          on
-      Position      [340, 745]
-      Direction     up
-      Flipped       off
-      LabelPosition south
-      Parameter {
-        Variable      "DialogGeometry"
-        Value         "[855 386 458 320]"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumInputs"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumOutputs"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumContStates"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumDiscStates"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "NumZCSignals"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "DirectFeedthrough"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "Ts"
-        Value         "1/20e3"
-        Show          off
-      }
-      Parameter {
-        Variable      "TerminalBasedSampleTimes"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "Parameters"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "LangStandard"
-        Value         "2"
-        Show          off
-      }
-      Parameter {
-        Variable      "GnuExtensions"
-        Value         "1"
-        Show          off
-      }
-      Parameter {
-        Variable      "RuntimeCheck"
-        Value         "2"
-        Show          off
-      }
-      Parameter {
-        Variable      "HighlightLevel"
-        Value         "0"
-        Show          off
-      }
-      Parameter {
-        Variable      "Declarations"
-        Value         "#include <math.h>\n"
-"\n"
-"#define B0 0.000386\n"
-"#define B1 0.000117\n"
-"#define B2 -0.000269\n"
-"#define A1 -1.521886\n"
-"#define A2 0.521886\n"
-"\n"
-"#define REF 20\n"
-"#define UL 0.8\n"
-"#define LL 0\n"
-"\n"
-"\n"
-"float x[3]={0};\n"
-"float y[3]={0};"
-        Show          off
-      }
-      Parameter {
-        Variable      "StartFcn"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "OutputFcn"
-        Value         "x[2] = x[1]; x[1] = x[0]; x[0] = InputSignal(0,0);\n"
-"y[2] = y[1]; y[1] = y[0];\n"
-"y[0] = B0*x[0] + B1*x[1] + B2*x[2] - A1*y[1] - A2*y[2];\n"
-"\t\n"
-"y[0] = (y[0] > UL) ? UL : y[0];\n"
-"y[0] = (y[0] < LL) ? LL : y[0];\n"
-"\n"
-"OutputSignal(0,0) = y[0];\n"
-        Show          off
-      }
-      Parameter {
-        Variable      "UpdateFcn"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "DerivativeFcn"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "TerminateFcn"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "StoreCustomStateFcn"
-        Value         ""
-        Show          off
-      }
-      Parameter {
-        Variable      "RestoreCustomStateFcn"
-        Value         ""
         Show          off
       }
     }
@@ -1334,32 +1194,6 @@ Plecs {
       }
     }
     Component {
-      Type          TransferFunction
-      Name          "Transfer Fcn3"
-      Show          on
-      Position      [440, 855]
-      Direction     right
-      Flipped       off
-      LabelPosition south
-      Frame         [-30, -15; 30, 15]
-      Parameter {
-        Variable      "Numerator"
-        Value         "[ 0 ,  -((32/5)/(0.75))/(47e-6) , (0.75*32)/(400e-6*47e"
-"-6) ]"
-        Show          off
-      }
-      Parameter {
-        Variable      "Denominator"
-        Value         "[ 1 , 1/(5*47e-6) , (0.75^2)/(400e-6*47e-6) ]"
-        Show          off
-      }
-      Parameter {
-        Variable      "X0"
-        Value         "0"
-        Show          off
-      }
-    }
-    Component {
       Type          Sum
       Name          "Sum5"
       Show          off
@@ -1645,11 +1479,11 @@ Plecs {
         Variable      "Declarations"
         Value         "#include <math.h>\n"
 "\n"
-"#define B0 0.000386\n"
-"#define B1 0.000117\n"
-"#define B2 -0.000269\n"
-"#define A1 -1.521886\n"
-"#define A2 0.521886\n"
+"#define B0 0.000183f\n"
+"#define B1 0.000349f\n"
+"#define B2 0.000166f\n"
+"#define A1 -1.521886f\n"
+"#define A2 0.521886f\n"
 "\n"
 "#define REF 20\n"
 "#define UL 0.8\n"
@@ -1808,6 +1642,180 @@ Plecs {
           KeepBaseline  off
           BaselineValue 0
         }
+      }
+    }
+    Component {
+      Type          CScript
+      Name          "C-Script2"
+      Show          on
+      Position      [340, 745]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "DialogGeometry"
+        Value         "[721 382 458 320]"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumInputs"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumOutputs"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumContStates"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumDiscStates"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumZCSignals"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "DirectFeedthrough"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ts"
+        Value         "1/20e3"
+        Show          off
+      }
+      Parameter {
+        Variable      "TerminalBasedSampleTimes"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Parameters"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "LangStandard"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "GnuExtensions"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "RuntimeCheck"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Declarations"
+        Value         "#include <math.h>\n"
+"\n"
+"#define B0 0.000183f\n"
+"#define B1 0.000349f\n"
+"#define B2 0.000166f\n"
+"#define A1 -1.521886f\n"
+"#define A2 0.521886f\n"
+"\n"
+"#define REF 20\n"
+"#define UL 0.8\n"
+"#define LL 0\n"
+"\n"
+"\n"
+"float x[3]={0};\n"
+"float y[3]={0};"
+        Show          off
+      }
+      Parameter {
+        Variable      "StartFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputFcn"
+        Value         "x[2] = x[1]; x[1] = x[0]; x[0] = InputSignal(0,0);\n"
+"y[2] = y[1]; y[1] = y[0];\n"
+"y[0] = B0*x[0] + B1*x[1] + B2*x[2] - A1*y[1] - A2*y[2];\n"
+"\t\n"
+"y[0] = (y[0] > UL) ? UL : y[0];\n"
+"y[0] = (y[0] < LL) ? LL : y[0];\n"
+"\n"
+"OutputSignal(0,0) = y[0];\n"
+        Show          off
+      }
+      Parameter {
+        Variable      "UpdateFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "DerivativeFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "TerminateFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "StoreCustomStateFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "RestoreCustomStateFcn"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          StateSpace
+      Name          "State Space"
+      Show          on
+      Position      [440, 855]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "A"
+        Value         "[ 0 , -0.75/(400e-6) ; 0.75/(47e-6) , -1/(5*47e-6) ]"
+        Show          off
+      }
+      Parameter {
+        Variable      "B"
+        Value         "[ 32/(400e-6) ; -((32/5)/(0.75))/(47e-6) ]"
+        Show          off
+      }
+      Parameter {
+        Variable      "C"
+        Value         "[0 , 1]"
+        Show          off
+      }
+      Parameter {
+        Variable      "D"
+        Value         "[0]"
+        Show          off
+      }
+      Parameter {
+        Variable      "X0"
+        Value         "0"
+        Show          off
       }
     }
     Connection {
@@ -2068,7 +2076,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "C-Script"
+      SrcComponent  "C-Script2"
       SrcTerminal   2
       DstComponent  "Comparator2"
       DstTerminal   1
@@ -2100,7 +2108,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum2"
       SrcTerminal   1
-      DstComponent  "C-Script"
+      DstComponent  "C-Script2"
       DstTerminal   1
     }
     Connection {
@@ -2196,7 +2204,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Transfer Fcn3"
+      SrcComponent  "State Space"
       SrcTerminal   2
       DstComponent  "Sum6"
       DstTerminal   2
@@ -2212,7 +2220,7 @@ Plecs {
         DstTerminal   1
       }
       Branch {
-        Points        [920, 855; 920, 620]
+        Points        [955, 855; 955, 620]
         DstComponent  "Mux1"
         DstTerminal   3
       }
@@ -2236,7 +2244,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum7"
       SrcTerminal   1
-      DstComponent  "Transfer Fcn3"
+      DstComponent  "State Space"
       DstTerminal   1
     }
     Connection {

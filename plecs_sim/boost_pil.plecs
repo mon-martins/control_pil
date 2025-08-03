@@ -54,8 +54,8 @@ Plecs {
   ScriptsDialogSplitterPos "0"
   Schematic {
     Location      [270, 138; 1809, 944]
-    ZoomFactor    0.873846
-    SliderPosition [0, 0]
+    ZoomFactor    1
+    SliderPosition [0, 28]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -298,11 +298,11 @@ Plecs {
         Variable      "Declarations"
         Value         "#include <math.h>\n"
 "\n"
-"#define B0 0.000386\n"
-"#define B1 0.000117\n"
-"#define B2 -0.000269\n"
-"#define A1 -1.521886\n"
-"#define A2 0.521886\n"
+"#define B0 0.000183f\n"
+"#define B1 0.000349f\n"
+"#define B2 0.000166f\n"
+"#define A1 -1.521886f\n"
+"#define A2 0.521886f\n"
 "\n"
 "#define REF 20\n"
 "#define UL 0.8\n"
@@ -712,7 +712,7 @@ Plecs {
       }
       Parameter {
         Variable      "After"
-        Value         "15"
+        Value         "20"
         Show          off
       }
       Parameter {
@@ -1149,11 +1149,11 @@ Plecs {
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [579, 40; 1660, 1080]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADafwCAAAAA/sAAAAQAFoAbwBvA"
+      Location      [548, 144; 1629, 1184]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAC0AAADj/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAA2kAAABoAP///wAAAAMAAAQ5AAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABDkAAABSAP///wAAA4EAAANpAAAA"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMBAAAAMAAAA48AAABoAP///wAAAAMAAAQ5AAAAYvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABDkAAABSAP///wAAA4EAAAOPAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
